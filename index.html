@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple HTML HomePage</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;1,200&display=swap"
+  rel="stylesheet">
+
+</head>
+
+<body>
+  <nav class="header">
+    <a href="#" class="logo"> <span style="font-size: 2em; color: #ff5733; font-family: 'Arial', sans-serif; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">P</span>etPalace</a>
+
+
+
+    <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div> 
+    <nav class="nav-items" id="navItems"> 
+      <a class="home" href="#">Home</a>
+      <a class="home" href="page2.html">Explore Breeds</a>
+      <a class="home" href="#brands">Products</a>
+      <div class="btn-group">
+        <button class="btn dropdown-toggle" data-toggle="dropdown">&nbsp;&nbsp; Live Demo Blocks
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="#">Boarding Service</a></li>
+          <li><a href="#">Toys and Shop</a></li>
+          <li><a href="#">Training School</a></li>
+        </ul>
+      </div>
+    </nav>
+  </nav>
+
+  <script>
+    function toggleMenu() {
+      var navItems = document.getElementById("navItems");
+      navItems.classList.toggle("show");
+    }
+  </script>
+
+<div class="intro" id="intro">  
+      <div class="img-bg"></div>
+        <div class="img-text">
+          <h1>Pets Toys and Food Shop</h1>
+        <p>Lorem ipsum dolor sit amet consectetur,<br> adipisicing elit. Asperiores obcaecati error doloribus. <br>
+         </p>
+         <button class="btn-home">Learn More</button>
+        
+        </div>
+      
+    </div>
+    <!-- 2 -->
+    <div class="container2">
+      <div class="content2">
+        <div  class="cont">
+            <h1 style="text-align: center;"><span style="color:#ec6939">Premium</span> Pet Food Manufacturer</h1>
+            <ul>
+              <li><span style="display: inline-block; width: 10px; height: 10px; background-color: #ff5733; border-radius: 50%; "></span> Superior Safety Practices: Ensuring the highest safety standards for your pets.</li>
+              <li><span style="display: inline-block; width: 10px; height: 10px; background-color: #ffd700; border-radius: 50%; "></span> Optimal Temperatures: Providing the perfect environment for your pets to thrive.</li>
+              <li><span style="display: inline-block; width: 10px; height: 10px; background-color: #6495ed; border-radius: 50%; "></span> Exceptional Quality: Offering premium products crafted with care and precision.</li>
+              <li><span style="display: inline-block; width: 10px; height: 10px; background-color: #32cd32; border-radius: 50%; "></span> Made by Experts: Developed by knowledgeable professionals passionate about pet well-being.</li>
+            </ul>
+            
+            
+        </div>
+      </div>
+      <div class="image">
+        <img src="images/food1.jpg" alt="food">
+      </div>
+    </div>
+    
+    
+        <!-- 3 -->
+  <div style="height: auto;">
+    <section class="articles" id="articles">
+      <article>
+        <div class="article-wrapper">
+          <figure>
+            <img src="https://i.pinimg.com/564x/f1/4a/47/f14a47cd9959ad3a465624fafb4495bf.jpg" alt="" />
+          </figure>
+          <div class="article-body">
+            <h2>Pet Supplies</h2>
+            <p>
+              Dive into our extensive collection of pet essentials, encompassing premium food options, a plethora of
+              engaging toys, and an assortment of grooming products. Elevate the well-being of your cherished cats and
+              dogs.
+            </p>
+            <a href="#" class="read-more">
+              Read more <span class="sr-only">about this is some title</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd"
+                  d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                  clip-rule="evenodd" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </article>
+      <article>
+
+        <div class="article-wrapper">
+          <figure>
+            <img src="https://i.pinimg.com/564x/9d/da/58/9dda58a9519b029675901c1723af5bb4.jpg" alt="" />
+          </figure>
+          <div class="article-body">
+            <h2>Cat Cares</h2>
+            <p>
+              Craft a paradise for your feline friend with our selection of indispensable items, including top-tier
+              litter boxes, an array of enticing scratching posts, and luxuriously plush beds. Ensure your cat's
+              contentment and joy.
+            </p>
+            <a href="#" class="read-more">
+              Read more <span class="sr-only">about this is some title</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd"
+                  d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                  clip-rule="evenodd" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </article>
+      <article>
+
+        <div class="article-wrapper">
+          <figure>
+            <img src="https://i.pinimg.com/564x/db/0e/ca/db0eca85c4402cc397f2ade8931fd4d0.jpg" alt="" />
+          </figure>
+          <div class="article-body">
+            <h2>Doggy Delights</h2>
+            <p>
+              Delight your canine companion with a treasure trove of entertaining toys, delectable treats in a multitude
+              of flavors, and a comprehensive range of grooming essentials. Transform every moment into a tail-wagging
+              memories together.
+            </p>
+            <a  href="#" class="read-more">
+              Read more <span class="sr-only">about this is some title</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd"
+                  d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                  clip-rule="evenodd" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </article>
+    </section>
+  </div>
+  <div class="about-me">
+    <div class="about-me-text">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit Sed ac feugiat neque. <br><span style="color:tomato;">Boby James</span> <br>Client</p>
+      <button class="view-btn">View More</button>
+    </div>
+    <img class="imgg" src="https://i.pinimg.com/564x/db/e9/a2/dbe9a2d8dcf5bf4c61ddfdded6d3145f.jpg" alt="me">
+  </div>
+  
+  <!--here  -->
+  <style>
+
+    .images {
+
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin-top: 40px;
+    }
+
+    .pp {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .pp img {
+      height: 200px;
+      width: 200px;
+      border: solid 3px rgb(248, 115, 66);
+    }
+
+    .pp p {
+      margin: 10px auto 10px;
+      font-size: 18px;
+    }
+
+    .r-images {
+      margin-top: 60px;
+      margin-left: 50px;
+      margin-right: 50px;
+      height: auto;
+    }
+    .txt-b {
+      margin: 30px;background: rgb(255,255,255);
+background: linear-gradient(90deg, rgba(255,255,255,1) 0%,
+rgba(203,187,255,1) 62%);
+border-radius:20px;
+align-items:center;
+text-align:center;
+display: flex;
+flex-direction: column;
+border:solid 2px black;
+
+    }
+    
+    .txt-b p {
+      font-size: 20px;
+    }
+    .custom-heading {
+      border: solid 2px rgb(0, 0, 0);
+      background-color: #21193b;
+      padding: 10px 20px;
+      color: rgb(248, 255, 60);
+      font-size: 40px;
+      font-weight: lighter;
+    }
+    
+    .custom-heading span {
+      font-weight: 900;
+    }
+    
+@media screen and (max-width: 768px) {
+  .r-images h1 {
+    font-size: 20px;
+    margin: 0%;
+  }
+  .r-images {
+    margin-top: 20px;
+  }
+  .tag {
+    font-size: 10px;
+  }
+  .txt-b h1 {
+    font-size:18px;
+    margin: 10px;
+  }
+   .txt-b p {
+    font-size: 12px;
+    margin: 0;
+   }
+  .custom-heading {
+    font-size: 10px;
+    padding: 5px 8px;
+  }
+  .pp img {
+    height: 100px;
+    width: 100px;
+  }
+  .button-ex {
+    padding: 10px 12px;
+    font-size: 10px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+  }
+
+}
+    .tag {
+
+      text-align: center;
+      justify-content: center;
+      position: relative;
+      font-size: 22px;
+    }
+
+    .button-ex {
+   
+      position: relative;
+      border-radius: 50px;
+      padding: 10px 22px 13px;
+      background-color: #21193b;
+      color: white;
+      margin-bottom: 20px;
+      border: none;
+
+    }
+
+    .images2 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      border: solid 5px #ec6939;
+      margin: 10px;
+      padding: 30px;
+
+    }
+    .images2 img {
+      height: 200px;
+      width: 200px;
+    }
+
+    .pp2 {
+      height: 200px;
+      width: 200px;
+      margin-bottom: 100px;
+    }
+  </style>
+  <div class="r-images">
+    <h1> <i class="fas fa-fire"
+        style="color:  rgb(248, 115, 66);"></i>&nbsp;Trending Categories</h1>
+    <div class="images">
+
+      <div class="pp">
+        <img class="img-circle" src="https://i.pinimg.com/564x/63/5c/6c/635c6c77369363d9a174f67224528cae.jpg"
+          alt="dog food">
+        <p>Dog Food</p>
+      </div>
+      <div class="pp">
+        <img class="img-circle" src="https://i.pinimg.com/564x/b8/9e/72/b89e72e7d69531561043c4b241eb407e.jpg"
+          alt="dof treat">
+        <p>Dog Treats</p>
+      </div>
+      <div class="pp">
+        <img class="img-circle" src="https://i.pinimg.com/564x/5e/94/1a/5e941ade7bbcba496d9a28d97d7ec229.jpg"
+          alt="winterwear">
+        <p>Winterwear</p>
+      </div>
+      <div class="pp">
+        <img class="img-circle" src="https://i.pinimg.com/564x/ac/74/13/ac7413e51547546bc537a306fe004288.jpg"
+          alt="cat food">
+        <p> Cat Food</p>
+      </div>
+      <div class="pp">
+        <img class="img-circle" src="https://i.pinimg.com/736x/d2/d4/8f/d2d48fd9ea747b750fbec2eb79a8b4ac.jpg"
+          alt="cat treat">
+        <p>Cat Treats</p>
+      </div>
+      <div class="pp">
+        <img class="img-circle" src="https://i.pinimg.com/564x/53/c2/b3/53c2b332a5e5ea43907401faf898846f.jpg"
+          alt="beds">
+        <p>Beds & Mats</p>
+      </div>
+      <div class="pp">
+        <img class="img-circle" src="https://i.pinimg.com/564x/00/d6/c5/00d6c56a1502b276de0ca5e607dbda76.jpg"
+          alt="harnesses">
+        <p>Harnesses</p>
+      </div>
+      <div class="pp">
+        <img class="img-circle" src="https://i.pinimg.com/564x/ee/c6/38/eec6386c0c0ecb9eeee99a2e503a8bc5.jpg"
+          alt="bowls">
+        <p>Bowls & Diners</p>
+      </div>
+      <div class="pp">
+        <img class="img-circle" src="https://i.pinimg.com/564x/a3/19/72/a31972c59fbc0250639cfd82fd404723.jpg"
+          alt="toys">
+        <p>Toys</p>
+      </div>
+      <div class="pp">
+        <img class="img-circle" src="https://i.pinimg.com/564x/09/64/03/0964038201b98f6972661cdca7d3a60b.jpg"
+          alt="supp">
+        <p>Supplements</p>
+      </div>
+
+    </div>
+  </div>
+  <!-- next -->
+  <div
+    style="margin: 50px;background-color:#ffffff;padding:8px;border:solid 2px #ed6939;border-radius:20px;position:relative">
+    <h1 class="tag">Sharing treat
+      time provides quality moments for <br>
+      <span style="color: #ed6939;font-weight:900">Bonding,creating lasting memories.</span>
+    </h1>
+
+  </div>
+  <!-- next -->
+  <div style="background-color: rgb(255, 255, 255); padding:10px">
+    <div class="txt-b" >
+      <h1>Unleash the joy with </h1>
+      <h1 class="custom-heading"> <span style="font-weight: 900;">HUFT</span> TREATS</h1>
+
+      <p>More than 100 options to choose from <i class="fas fa-cat" style="color:#21193b;"></i>
+      </p>
+      <button class="button-ex">Explore now <i class="fas fa-arrow-right"></i></button>
+    </div>
+  </div>
+  <!-- food -->
+  <br>
+<section id="brands">
+  
+  <h1 style="font-size:28px;padding:20px"> <i class="fas fa-award"
+    style="color:  rgb(255, 218, 10);font-size:larger"></i>&nbsp;Top Food Brands</h1>
+<div style="padding: auto;background: rgb(255,255,255);">
+  <div class="images2">
+    <div class="pp2">
+      <img src="https://i.pinimg.com/564x/c9/f6/ec/c9f6eccb9466aec8cc8574358f95c767.jpg" alt="Royal Canin"
+        height="200px">
+      <p style="text-align: center; line-height: 1px;font-size:18px;margin:20px">Royal Canin</p>
+      <hr style="height:2px;border-width:0;color:gray;background-color:#ec6939;width:89px">
+      <p style="text-align: center;font-size:16px">Flat 80% OFF</p>
+    </div>
+
+    <div class="pp2">
+      <img src="https://i.pinimg.com/564x/04/db/a9/04dba90a945542cbc2da4a58cf668e45.jpg" alt="Royal Canin"
+        height="200px">
+      <p style="text-align: center; line-height: 1px;font-size:18px;margin:20px">Royal Canin</p>
+      <hr style="height:2px;border-width:0;color:gray;background-color:#ec6939;width:89px">
+      <p style="text-align: center;font-size:16px">Flat 80% OFF</p>
+    </div>
+    <div class="pp2">
+      <img src="https://i.pinimg.com/564x/23/77/20/237720853824794ef34572fa8c768525.jpg" alt="Royal Canin"
+        height="200px">
+      <p style="text-align: center; line-height: 1px;font-size:18px;margin:20px">Royal Canin</p>
+      <hr style="height:2px;border-width:0;color:gray;background-color:#ec6939;width:89px">
+      <p style="text-align: center;font-size:16px">Flat 30% OFF</p>
+    </div>
+    <div class="pp2">
+      <img src="https://i.pinimg.com/736x/c1/14/52/c11452a8c8fcb07aa09b857e308e72b2.jpg" alt="Royal Canin"
+        height="200px">
+      <p style="text-align: center; line-height: 1px;font-size:18px;margin:20px">Royal Canin</p>
+      <hr style="height:2px;border-width:0;color:gray;background-color:#ec6939;width:89px">
+      <p style="text-align: center;font-size:16px">Flat 50% OFF</p>
+    </div>
+    <div class="pp2">
+      <img src="https://i.pinimg.com/564x/d3/0f/d1/d30fd11babe31eb93c0fc535c526c875.jpg" alt="Royal Canin"
+        height="200px">
+      <p style="text-align: center; line-height: 1px;font-size:18px;margin:20px">Royal Canin</p>
+      <hr style="height:2px;border-width:0;color:gray;background-color:#ec6939;width:89px">
+      <p style="text-align: center;font-size:16px">Flat 90% OFF</p>
+    </div>
+
+  </div>
+</div>
+</section>
+  <!-- ad -->
+
+
+  <!-- login -->
+  <div style="display: flex;" class="container7">
+    <img src="https://images.unsplash.com/photo-1509205477838-a534e43a849f?q=80&w=1778&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image" class="cus-img">
+
+    <form style="background-color:rgb(255, 255, 255)">
+      <h1>Pet Supply Order Form</h1>
+      <!-- Name -->
+      <div class="form-group">
+        <label for="firstName">Name:</label>
+        <input type="text" class="form-control" id="firstName" name="firstName" required>
+      </div>
+
+      <!-- Password -->
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" class="form-control" id="password" name="password" required>
+      </div>
+
+      <!-- Contact Details -->
+      <div class="form-group">
+        <label for="email">Email Address:</label>
+        <input type="email" class="form-control" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number:</label>
+        <input type="tel" class="form-control" id="phone" name="phone">
+      </div>
+
+      <!-- Shipping Address -->
+      <div class="form-group">
+        <label for="shippingAddress">Shipping Address:</label>
+        <textarea class="form-control" id="shippingAddress" name="shippingAddress" required></textarea>
+      </div>
+      <!-- Submit Button -->
+      <button type="submit" style="background-color:rgb(250, 132, 89);color:white" class="btn">Submit</button>
+
+    </form>
+  </div>
+  <footer class="footer">
+    <div style="font-size: 22px;font-weight:thin">
+      <a  style="color: black;" href="#"><img width="25" height="25" src="https://img.icons8.com/ios-filled/50/cat-footprint.png" alt="cat-footprint" /> PetPalace</a>   
+    </div>
+
+    <div class="bottom-links">
+      <div class="links">
+        <ul style="list-style-type: none;">
+        <li>  <a href="#">Home</a></li>
+        <li>  <a href="#">About</a></li>
+         <li> <a href="#">Contact</a></li>
+        </ul>
+       
+      </div>
+      <div class="links">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

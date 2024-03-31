@@ -1,0 +1,718 @@
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Common styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f5f5f5;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  height: 80px;
+}
+
+.header .logo  {
+  font-size: 22px;
+  color: #000;
+  text-decoration: none;
+  margin-left: 30px;
+  font-weight: 600;
+}
+.logo i {
+  font-size: 30px;
+}
+
+.nav-items {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #f5f5f5;
+  margin-right: 20px;
+}
+
+.nav-items a {
+  text-decoration: none;
+  color: #000;
+  padding: 5px 20px;
+}
+
+/* Burger icon styles */
+.menu-toggle {
+  cursor: pointer;
+  padding: 30px;
+  font-size: 33px;
+  display: none;
+}
+.dropdown-toggle {
+  font-size: 20px;
+}
+
+/* Show burger icon only on small screens */
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display:inline;
+    width: 100%;
+    padding-left:150px;
+  }
+
+  .nav-items {
+    width: 100%;
+    display: none; /* Hide the navigation items initially */
+  }
+  .nav-items.show {
+    display: block; /* Display the navigation items when the burger icon is clicked */
+  }
+
+  /* Show nav-items when 'show' class is added */
+  .nav-items.show {
+    display: block;
+    position: absolute;
+    top: 80px; /* Adjust as needed */
+    left: 0;
+    right: 0;
+    background-color: #f5f5f5;
+    z-index: 999;
+  }
+  .nav-items.show a {
+  display: block;
+  padding: 10px 20px;
+  color: #000;
+  text-decoration: none;
+}
+.header .logo {
+  font-size: 18px;
+
+}
+
+.logo i {
+  font-size: 18px;
+}
+.nav-items a , .dropdown-menu , .btn.dropdown-toggle {
+  font-size: 10px;
+
+}
+.dropdown-toggle {
+  font-size: 10px;
+}
+
+
+}
+
+.intro {
+  display: flex;
+  justify-content: flex-end; /* Align content to the right */
+  align-items: center; /* Center content vertically */
+  height: 100vh; /* Set height to full viewport height */
+}
+
+.img-bg {
+  flex: 1; /* Occupy remaining space */
+  position: relative; /* Enable positioning for child elements */
+  background: url(https://images.unsplash.com/photo-1550206574-42cfa61e2a9d?q=80&w=1926&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-clip: initial;
+  width: 100%;
+  height: 100%; 
+}
+
+.img-text {
+  position: absolute; /* Position the text relative to the parent */
+  top: 50%; /* Move the text to the middle vertically */
+  right: 20px; /* Set distance from the right edge */
+  transform: translateY(-50%); /* Adjust vertical alignment */
+  text-align: right; /* Align text to the right */
+  color: #ffffff;
+  font-size: 22px;
+  text-align: center;
+}
+
+.img-text h1 {
+  font-size: 42px;
+  margin-bottom: 10px; /* Add some space below the heading */
+}
+
+.img-text p {
+  font-size: 22px;
+  margin-bottom: 20px; /* Add some space below the paragraph */
+}
+
+.btn-home {
+  font-size: 18px;
+  padding: 10px 20px;
+  background-color: #fff;
+  border: 2px solid #000;
+  border-radius: 5px;
+  cursor: pointer;
+
+}
+
+@media screen and (max-width: 768px) {
+  .img-text {
+    font-size: 16px;
+    right: 20px; 
+    left: 20px;
+  }
+
+  .img-text h1 {
+    font-size: 28px; /* Adjust font size for smaller screens */
+  }
+
+  .img-text p {
+    font-size: 12px; /* Adjust font size for smaller screens */
+  }
+}
+
+
+
+.btn-home {
+
+  color: white;
+  background-color: rgb(237, 105, 57);
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  padding: 10px 15px;
+  text-align: center;
+  align-items: center;
+
+}
+
+.btn-home:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgb(241, 141, 104);
+} 
+
+
+/* 2 */
+.container {
+  display: flex;
+  flex-direction: row-reverse;
+  /* Reverse the order to have image on the right */
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.content {
+  flex: 1;
+  /* Take up remaining space */
+  padding: 30px;
+  box-sizing: border-box;
+  font-size: 23px;
+}
+
+.content h1 {
+  font-weight: 700;
+  font-size: 60px;
+}
+
+.container2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content2 {
+  flex: 1;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 85vh;
+}
+.cont {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+}
+
+.cont ul {
+  margin: 10px 0;
+  list-style-type: none;
+  font-size: 18px;
+}
+
+
+.image {
+  flex: 1;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.image img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .container2 {
+    flex-direction: column;
+    height: 60vh;
+  }
+
+  .content2,
+  .image {
+
+    padding: 0px;
+    margin-top: 30px;
+  }
+  .cont ul {
+    font-size: 12px; /* Adjusted font size for mobile view */
+    text-align:justify;
+    padding-right: 50px;
+  }
+  .cont h1 {
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+  }
+  .content2 {
+    height: 50vh;
+    padding: 0%;
+  }
+  .image img {
+    height:60%;
+  }
+}
+
+
+
+#heart,
+#sun {
+  color: rgb(248, 115, 66);
+
+}
+
+#heart:hover,
+#sun:hover {
+  color: #000;
+}
+
+.home {
+  border-radius: 50% black;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.home:hover {
+  color: rgb(252, 152, 115);
+}
+
+.btn {
+  font-weight: 600;
+}
+
+.btn:hover {
+  color: rgb(252, 152, 115);
+}
+
+.dropdown-menu {
+  font-size: 18px;
+}
+
+.dropdown-menu li a:hover {
+  color: rgb(252, 152, 115);
+}
+
+
+
+
+
+/* Cards */
+article {
+
+  position: relative;
+  border-radius: 16px;
+  box-shadow: none;
+  background: #fff;
+  transform-origin: center;
+  transition: all 0.4s ease-in-out;
+  overflow: hidden;
+}
+
+article a::after {
+  position: absolute;
+  inset-block: 0;
+  inset-inline: 0;
+  cursor: pointer;
+  content: "";
+}
+
+.balloon {
+  padding-left: 200px;
+}
+
+/* basic article elements styling */
+article h2 {
+  margin: 0 0 18px 0;
+  font-size: 1.9rem;
+  letter-spacing: 0.06em;
+  color: var(--title-color);
+  transition: color 0.3s ease-out;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+article img {
+  max-width: 100%;
+  transform-origin: center;
+  transform: scale(var(--img-scale));
+  transition: transform 0.4s ease-in-out;
+}
+
+.article-body {
+  padding: 26px;
+
+}
+
+.article-body h2 {
+  font-size: 32px;
+}
+
+article a {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+article p {
+  word-spacing: 2px;
+
+}
+
+article a:focus {
+  outline: 1px dotted rgb(248, 115, 66);
+}
+
+article a .icon {
+  min-width: 24px;
+  width: 24px;
+  height: 24px;
+  margin-left: 5px;
+  transform: translateX(var(--link-icon-translate));
+  opacity: var(--link-icon-opacity);
+  transition: all 0.3s;
+}
+
+/* using the has() relational pseudo selector to update our custom properties */
+article:has(:hover, :focus) {
+  --img-scale: 1.1;
+  --title-color: rgb(248, 115, 66);
+  --link-icon-translate: 0;
+  --link-icon-opacity: 1;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+.articles {
+  display: flex;
+  max-width: 1700px;
+  margin-inline: auto;
+  padding-inline: 24px;
+  gap: 24px;
+  margin: 0;
+  padding: 48px 15px;
+  line-height: 2.6rem;
+  width: fit-content;
+}
+
+@media screen and (max-width: 960px) {
+  article {
+    container: card;
+  }
+
+  .article-body p {
+    display: none;
+  }
+  .article-body h2 {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .articles {
+    flex-wrap:wrap;
+  }
+}
+
+@container card (min-width: 380px) {
+  .article-wrapper {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 16px;
+  }
+
+  .article-body {
+    padding-left: 10px;
+  }
+
+  figure {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  figure img {
+    height: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+  }
+}
+
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+/* about -me  */
+.about-me {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border-top: 2px solid #eeeeee;
+  background-color: #f4eeee;
+}
+
+.about-me .imgg {
+  width: 50%; /* Adjusted width for the image */
+  max-width: 500px;
+  height: auto;
+  border-radius: 10px;
+  margin-right: 20px; /* Added margin to separate the image from the text */
+}
+
+.about-me-text {
+  flex: 1; /* Allow the text to expand and take available space */
+  text-align: justify;
+  padding: 10px 100px;
+
+}  
+
+.about-me-text p {
+  font-size: 22px;
+  color: #585858;
+  margin: 10px 0;
+}
+
+.view-btn {
+  background-color: rgb(250, 109, 58);
+  color: white;
+  font-size: 16px;
+  border-radius:50px;
+  border: none;
+  font-weight: 600;
+  padding: 12px 16px;
+}
+
+/* Hover effect */
+.view-btn:hover {
+  background-color: rgb(255, 176, 147);
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+  .about-me {
+    flex-direction: column-reverse; /* Stack items vertically on small screens */
+    align-items: flex-start; /* Align items to the start */
+    padding: 10px;
+    height: 70vh;
+  }
+
+  .about-me .imgg {
+    width: 100%; /* Make the image occupy full width on smaller screens */
+    border-radius: 50%;
+    margin-bottom: 20px; /* Add margin to separate the image from the text */
+    padding: 10px 10px;
+
+  }
+  .about-me-text {
+    padding: 10px 50px;
+  }
+
+  .about-me-text p {
+    font-size: 12px;
+    color: #585858;
+    text-align:justify;
+
+  }
+  .view-btn {
+    background-color: rgb(250, 109, 58);
+    color: white;
+    font-size: 12px;
+    border-radius:50px;
+    border: none;
+    font-weight: 600;
+    padding: 10px 12px;
+  }
+  
+}
+.cus-img {
+  height: 500px;
+  width: auto;
+  border-radius: 100px;
+}
+.container7 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.cus-img {
+  width: 100%;
+  max-width: 500px; /* Adjust max-width as per your design */
+}
+
+form {
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  max-width: 500px; /* Adjust max-width as per your design */
+  padding: 20px;
+}
+
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+button.btn {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Media Query for Mobile */
+@media only screen and (max-width: 600px) {
+  .container7 {
+    flex-direction: column;
+  }
+
+  .cus-img {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  form {
+    max-width: 100%;
+  }
+  form  h1 {
+    font-size: 22px;
+  }
+  
+.cus-img {
+  width: 100%;
+  max-width: 400px; /* Adjust max-width as per your design */
+  height: 50vh;
+}
+}
+/* footer */
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(241, 141, 104);
+  padding: 40px 20px; /* Adjust padding as per your design */
+  text-align: center;
+}
+
+.footer .copy {
+  color: #000000;
+
+}
+
+.bottom-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+
+}
+
+.bottom-links .links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+.links li {
+  padding-bottom: 20px;
+}
+
+.bottom-links .links a {
+  text-decoration: none;
+  color: #ffffff;
+  padding: 1px 30px 30px;
+  text-align: center;
+  margin: 5px;
+}
+
+.links a {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.links a:hover {
+  font-weight: 900;
+  color: #eeeeee;
+}
+
+/* Media Query for larger screens */
+@media only screen and (min-width: 768px) {
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 80px;
+    text-align: left;
+  }
+
+  .bottom-links {
+    flex-direction: row;
+  }
+
+  .bottom-links .links a {
+    flex-direction: row;
+    text-align: center;
+  }
+}

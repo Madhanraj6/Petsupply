@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+ 
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      font-family: 'Poppins', sans-serif;
+        }
+    .container {
+      text-align: center;
+      background-color: rgb(246, 148, 112);
+      height: 30vh;
+      padding-top: 10vh;
+      font-size: 0.9rem;
+ 
+    }
+    .search-button {
+      width: 300px; /* Adjust width as needed */
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 10px;
+
+    }
+    .search-icon {
+      margin-left: -30px; /* Adjust the value to position the icon properly */
+      color: #555; /* Adjust icon color */
+    }
+    .cat-item {
+      flex: 0 0 calc(33.333% - 20px); /* Three items per row with 20px margin between them */
+      margin: 10px;
+      text-align: center;
+    }
+    .cat-item img {
+      width: 60%;
+      height: 80%;
+      border-radius: 5px;
+    }
+    .cat-item p {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    .cat-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    @media screen and (max-width: 768px) {
+      .cat-item {
+        flex: 0 0 calc(33.333% - 20px); /* Three items per row with 20px margin between them */
+        margin: 10px;
+        text-align: center;
+        font-size: 10px;
+      }
+      .cat-item img {
+        width: 100%;
+        height: 80%;
+        border-radius: 5px;
+      }
+      
+    }
+
+    @media screen and (max-width: 480px) {
+      .cat-item {
+        flex: 0 0 calc(50% - 20px); 
+
+      }
+      .cat-item img {
+        width: 100%;
+        height: 80%;
+        border-radius: 5px;
+      }
+    }
+    .container2 {
+      text-align: center;
+      background-color: rgb(246, 148, 112);
+      padding-top: 10vh;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body >
+  <div class="container">
+    <h1 >Want to Know About Cat Breeds</h1>
+    <div>
+      <input type="text" placeholder="Search" class="search-button">
+      <i class="search-icon fas fa-search"></i>
+    
+    </div>
+  </div>
+  <!-- images -->
+ <div class="continer2">
+  <div id="catList" class="cat-grid"></div>
+ </div>
+ <script>
+  fetch('pets.json')
+    .then(response => response.json())
+    .then(data => {
+      const catList = document.getElementById('catList');
+      const searchInput = document.querySelector('.search-button');
+
+      function displayPets(pets) {
+        catList.innerHTML = ''; // Clear previous content
+        pets.forEach(pet => {
+          const petDiv = document.createElement('div');
+          petDiv.classList.add('cat-item'); // Add the 'cat-item' class to the div
+          petDiv.innerHTML = `<img src="${pet.image}" alt="${pet.name}">
+                              <p>${pet.name}</p>`;
+          catList.appendChild(petDiv);
+        });
+      }
+
+      displayPets(data); // Display all pets initially
+
+      searchInput.addEventListener('input', function() {
+        const searchText = this.value.toLowerCase();
+        const filteredPets = data.filter(pet => pet.name.toLowerCase().includes(searchText));
+        displayPets(filteredPets);
+      });
+    })
+    .catch(error => {
+      console.error('Error fetching data:', error);
+    });
+
+</script>
+
+</body>
+</html>
